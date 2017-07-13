@@ -10,5 +10,11 @@ docker pull kokspflanze/centos-apache-php56
 # Running Container
 
 ```
-docker run -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v /opt/docker/docker_test/data:/var/www/page  --restart=always -d -it kokspflanze/centos-apache-php56 
+docker run -v /opt/docker/docker_test/data:/var/www/page --restart=always -d -it kokspflanze/centos-apache-php56 
+```
+
+# Attach Container
+
+```
+docker exec kokspflanze/centos-apache-php56 /bin/bash
 ```
